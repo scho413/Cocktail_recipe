@@ -46,28 +46,54 @@ function App() {
                 <table style={{ width: "100%" }}>
                   <tr>
                     <td>
-                      <img src={IngredientImage + cocktailInfo.drinks[0].strIngredient1 + '.png'} style={{ width: "50%", height: "50%" }}></img>
-                      <figcaption>{cocktailInfo.drinks[0].strMeasure1} {cocktailInfo.drinks[0].strIngredient1}</figcaption>
+                      {cocktailInfo.drinks[0].strIngredient1 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient1 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure1} {cocktailInfo.drinks[0].strIngredient1}</figcaption></>
+                      )}
                     </td>
                     <td>
-                      <img src={IngredientImage + cocktailInfo.drinks[0].strIngredient2 + '.png'} style={{ width: "50%", height: "50%" }}></img>
-                      <figcaption>{cocktailInfo.drinks[0].strMeasure2} {cocktailInfo.drinks[0].strIngredient2}</figcaption></td>
+                      {cocktailInfo.drinks[0].strIngredient2 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient2 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure2} {cocktailInfo.drinks[0].strIngredient2}</figcaption></>
+                      )}
+                    </td>
                     <td>
-                      <img src={IngredientImage + cocktailInfo.drinks[0].strIngredient3 + '.png'} style={{ width: "50%", height: "50%" }}></img>
-                      <figcaption>{cocktailInfo.drinks[0].strMeasure3} {cocktailInfo.drinks[0].strIngredient3}</figcaption>
+                      {cocktailInfo.drinks[0].strIngredient3 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient3 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure3} {cocktailInfo.drinks[0].strIngredient3}</figcaption></>
+                      )}
                     </td>
                   </tr>
                   <tr>
-                  <td>
-                      <img src={IngredientImage + cocktailInfo.drinks[0].strIngredient4 + '.png'} style={{ width: "50%", height: "50%" }}></img>
-                      <figcaption>{cocktailInfo.drinks[0].strMeasure4} {cocktailInfo.drinks[0].strIngredient4}</figcaption>
+                    <td>
+                      {cocktailInfo.drinks[0].strIngredient4 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient4 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure4} {cocktailInfo.drinks[0].strIngredient4}</figcaption></>
+                      )}
                     </td>
                     <td>
-                      <img src={IngredientImage + cocktailInfo.drinks[0].strIngredient5 + '.png'} style={{ width: "50%", height: "50%" }}></img>
-                      <figcaption>{cocktailInfo.drinks[0].strMeasure5} {cocktailInfo.drinks[0].strIngredient5}</figcaption></td>
+                      {cocktailInfo.drinks[0].strIngredient5 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient5 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure5} {cocktailInfo.drinks[0].strIngredient5}</figcaption></>
+                      )}
+                    </td>
+                    <td>
+                      {cocktailInfo.drinks[0].strIngredient6 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient6 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure6} {cocktailInfo.drinks[0].strIngredient6}</figcaption></>
+                      )}
+                    </td>
                   </tr>
                   <tr>
-
+                    <td>
+                      {cocktailInfo.drinks[0].strIngredient7 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient7 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure7} {cocktailInfo.drinks[0].strIngredient7}</figcaption></>
+                      )}
+                    </td>
+                    <td>
+                      {cocktailInfo.drinks[0].strIngredient8 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient8 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure8} {cocktailInfo.drinks[0].strIngredient8}</figcaption></>
+                      )}
+                    </td>
+                    <td>
+                      {cocktailInfo.drinks[0].strIngredient9 != null && (
+                        <><img src={IngredientImage + cocktailInfo.drinks[0].strIngredient9 + '.png'} style={{ width: "50%", height: "50%" }}></img><figcaption>{cocktailInfo.drinks[0].strMeasure9} {cocktailInfo.drinks[0].strIngredient9}</figcaption></>
+                      )}
+                    </td>
                   </tr>
                 </table>
               </td>
