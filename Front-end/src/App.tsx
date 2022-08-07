@@ -28,8 +28,8 @@ function App() {
       {cocktailInfo === undefined ? (
         <p>No recipe not found</p>
       ) : (
-        <><br/><br/>
-        <Fade in={status === true} timeout={4000}>
+        <><br/>
+        <Fade in={status === true} timeout={500}>
           <Alert severity="success">Successfully found the recipe!</Alert>
         </Fade>
         <div id="cocktail-result">
