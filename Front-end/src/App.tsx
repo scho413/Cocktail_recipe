@@ -4,11 +4,11 @@ import './App.css';
 import { Alert, Box, Button, Fade, Grid, Paper, Skeleton } from "@mui/material";
 
 function App() {
-  // Declare a new state variable, which we'll call "pokemonName"
   const [cocktailName, setCocktailName] = useState("");
   const IngredientImage = "https://www.thecocktaildb.com/images/ingredients/";
   const [cocktailInfo, setCocktailInfo] = useState<undefined | any>(undefined);
   const [status, setChoice] = useState(true);
+  const [isFirst, setisFirst] = useState(true);
 
   const COCKTAIL_BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
   return (
@@ -25,10 +25,17 @@ function App() {
         </button>
       </div>
 
-      {cocktailInfo === undefined ? (
-        <p>No recipe not found</p>
+      {cocktailInfo === undefined || cocktailInfo.drinks === null ? (
+        <><br />
+        {isFirst == false && (
+          <Fade in={status === true} timeout={500}>
+            <Alert severity="error">Counldn't find the recipe!</Alert>
+          </Fade>
+        )}
+        </>
       ) : (
-        <><br/>
+        <>
+        <br/>
         <Fade in={status === true} timeout={500}>
           <Alert severity="success">Successfully found the recipe!</Alert>
         </Fade>
@@ -37,7 +44,7 @@ function App() {
               <tbody>
                 <tr>
                   <td style={{ width: "35%" }}>
-                    <h2>{cocktailInfo.drinks[0].strDrink}</h2>
+                      <h2>{cocktailInfo.drinks[0].strDrink}</h2>
                   </td>
                   <td style={{ width: "60%" }}>
                     <h2>Ingredients</h2>
@@ -108,6 +115,8 @@ function App() {
             <h2>Instructions</h2>
             <div>
               {cocktailInfo.drinks[0].strInstructions}
+              <br/>
+              <br/>
             </div>    
           </div>          
           </>
@@ -117,6 +126,7 @@ function App() {
 
   function search() {
     axios.get(COCKTAIL_BASE_URL + "search.php?s=" + cocktailName).then((res) => {
+      setisFirst(false);
       setCocktailInfo(res.data);
       console.log(res.data.drinks[0]);
     });
