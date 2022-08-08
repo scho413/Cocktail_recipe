@@ -18,8 +18,7 @@ function App() {
       </h1>
       
       <div>
-        <label>Cocktail Name</label><br/>
-        <input type="text" id="cocktail-name" name="cocktail-name" onChange={e => setCocktailName(e.target.value)}/>
+        <input placeholder="Cocktail Name" type="text" id="cocktail-name" name="cocktail-name" onChange={e => setCocktailName(e.target.value)}/>
         <button onClick={search}>
         Search
         </button>
